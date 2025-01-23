@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Showcase</title>
+    <style>
+      /* Global Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f3f4f6;
+        color: #4a4a4a;
+        line-height: 1.6;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      /* Navbar Section */
+      .navbar {
+        background-color: #6b5b95;
+        
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo-container img {
+        height: 60px; /* Adjust logo size */
+      }
+      .navbar-menu {
+        display: flex;
+        gap: 20px;
+      }
+      .navbar-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+    
+
+      /* Banner Section */
+      .banner {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      /* About Section */
+      .about {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        margin: 40px 0;
+      }
+      .about h2 {
+        font-size: 2rem;
+        color: #6b5b95;
+        margin-bottom: 15px;
+      }
+      .about p {
+        font-size: 1rem;
+        line-height: 1.8;
+        max-width: 600px;
+      }
+      .about img {
+        max-width: 500px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      /* Models Section */
+      .models {
+        margin: 40px 0;
+      }
+      .models h4 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #6b5b95;
+      }
+      .models-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .models-grid img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .models-grid img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+      /* Footer Section */
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background: #6b5b95;
+        color: #fff;
+        font-size: 1rem;
+      }
+      footer a {
+        color: #f7b733;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: row; /* Ensure logo and hamburger are on the same row */
+          justify-content: space-between;
+        }
+
+        .navbar-menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .navbar-menu a {
+          padding: 10px;
+          text-align: center;
+          width: 100%;
+          border-top: 1px solid #ddd;
+        }
+
+        .navbar-toggle {
+          display: flex;
+        }
+
+        .navbar-menu.active {
+          display: flex;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar-menu a {
+          font-size: 0.9rem;
+        }
+        .about h2 {
+          font-size: 1.5rem;
+        }
+        .about p {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+        .models-grid {
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 15px;
+        }
+        .models-grid img {
+          height: 200px;
+        }
+        footer {
+          font-size: 0.8rem;
+          padding: 10px 0;
+        }
+        footer p {
+          font-size: 0.70rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="photos/logo.png" alt="Logo" class="logo" />
+      </div>
+      <div class="navbar-menu">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="termandcondition.html">Terms & Conditions</a>
+      </div>
+     
+    </nav>
+
+    <div class="banner">
+      <img src="photos/Banner.jpg" alt="Banner" />
+    </div>
+
+    <div class="container">
+      <!-- About Section -->
+      <div class="about">
+        <div>
+          <h2>Why Choose Us</h2>
+          <p>
+            Welcome to Palco Toyota, a trusted showroom for Toyota cars in Kharagpur, brought to you by Palconn Automobiles LLP. We are dedicated to providing an exceptional car-buying experience with a wide range of new Toyota models, expert advice, and reliable after-sales services. At Palco Toyota, our commitment is to deliver quality, value, and customer satisfaction every step of the way. Whether you're looking for a family car, a performance vehicle, or a reliable daily driver, we are here to help you find the perfect Toyota that fits your needs. Visit us today and experience the Toyota difference!
+          </p>
+        </div>
+        <div>
+          <img src="photos/About.jpg" alt="About Us" />
+        </div>
+      </div>
+
+      <!-- Models Section -->
+      <div class="models">
+        <h4>Our Models</h4>
+        <div class="models-grid">
+          <img src="photos/Car1.jpg" alt="Car 1" />
+          <img src="photos/Car2.jpg" alt="Car 2" />
+          <img src="photos/Car3.jpg" alt="Car 3" />
+          <img src="photos/Car4.jpg" alt="Car 4" />
+          <img src="photos/Car5.jpg" alt="Car 5" />
+          <img src="photos/Car6.jpg" alt="Car 6" />
+          <img src="photos/Car13.jpg" alt="Car 7" />
+          <img src="photos/Car8.jpg" alt="Car 8" />
+          <img src="photos/Car9.jpg" alt="Car 9" />
+          <img src="photos/Car10.jpg" alt="Car 10" />
+          <img src="photos/Car11.jpg" alt="Car 11" />
+          <img src="photos/Car12.jpg" alt="Car 12" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <p><strong>Address:</strong> Palconn Automobiles LLP, Ground Floor, JI 205 Khatian 1371, Kharagpur, Matkatpur, Satkui, Dist-Paschim Medinipur, Kharagpur-721305</p>
+        <p><strong>Phone:</strong> 090464 68585</p>
+      </div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="termandcondition.html">Terms & Condition</a>
+      <p>@Copyright Palco Toyota | Palconn Automobiles LLP || Made By<span><a href="https://www.thinknxtmedia.com/index.html"> Think nXt Media</a></span></p>
+    </footer>
+
+    
+    
+  </body>
+</html>

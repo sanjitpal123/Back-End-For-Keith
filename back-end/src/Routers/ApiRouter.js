@@ -1,0 +1,10 @@
+import mongoose from "mongoose";
+import express from "express";
+import userrouter from "./userRouter.js";
+import navbarrouter from "./NavabrRouter.js";
+import HeroRouter from "./HeroRouter.js";
+const apirouter=express.Router();
+apirouter.use('/user',userrouter);
+apirouter.use('/navbar',navbarrouter);
+apirouter.use('/hero',HeroRouter);
+export default apirouter;
