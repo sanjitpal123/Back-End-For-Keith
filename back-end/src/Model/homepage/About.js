@@ -5,6 +5,10 @@ const aboutmodel=mongoose.Schema({
     },
     content:{
         type:String
+    },
+    
+    image:{
+        type:String
     }
 })
 
